@@ -1,0 +1,24 @@
+[
+  {
+    "goal_id": "goal_01",
+    "name": "3-Month Emergency Fund",
+    "target_amount": 5000.00,
+    "current_amount": 2450.00,
+    "monthly_contribution_target": 250.00,
+    "priority": "HIGH",
+    "deadline": "2027-04-30",
+    "minimum_lock_reserve": 2000.00,
+    "notes": "Essential liquidity safety net. Any purchase dipping into this threshold is dangerous."
+  },
+  {
+    "goal_id": "goal_02",
+    "name": "Summer Vacation Trip",
+    "target_amount": 1500.00,
+    "current_amount": 600.00,
+    "monthly_contribution_target": 150.00,
+    "priority": "MEDIUM",
+    "deadline": "2027-06-15",
+    "minimum_lock_reserve": 0.00,
+    "notes": "Discretionary savings bucket."
+  }
+]

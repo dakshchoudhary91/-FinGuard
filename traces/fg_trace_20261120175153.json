@@ -1,0 +1,609 @@
+{
+  "trace_id": "fg_trace_20261120175153",
+  "session_id": "user_default",
+  "timestamp": "2026-11-20T17:51:53.356681",
+  "query": "Can I afford KEYBOARD for $40.00?",
+  "purchase_amount": 40.0,
+  "category": "Shopping & Discretionary",
+  "verdict": "CONDITIONAL_AFFORD",
+  "total_duration_ms": 31.305789947509766,
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "spans": [
+    {
+      "span_id": "span_270e312c",
+      "name": "validate_user_prompt",
+      "agent_name": "InputGuardrail",
+      "framework": "Guardrail",
+      "start_time": "2026-11-20T17:51:53.356681",
+      "end_time": "2026-11-20T17:51:53.356681",
+      "duration_ms": 0.0,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "status": "PASSED"
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_41da127f",
+      "name": "query_checking_balance",
+      "agent_name": "Checking Account Watcher",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:51:55.626082",
+      "end_time": "2026-11-20T17:51:55.628018",
+      "duration_ms": 1.9352436065673828,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "checking": {
+          "account_id": "acc_chk_01",
+          "name": "Everyday Checking Account",
+          "current_balance": 1375.0,
+          "available_balance": 1350.0,
+          "overdraft_protection": false,
+          "recent_transactions": [
+            {
+              "id": "tx_01",
+              "account_id": "acc_chk_01",
+              "date": "2026-10-25",
+              "amount": 84.5,
+              "merchant": "Whole Foods Market",
+              "category": "Groceries",
+              "type": "debit"
+            },
+            {
+              "id": "tx_02",
+              "account_id": "acc_chk_01",
+              "date": "2026-10-23",
+              "amount": 15.75,
+              "merchant": "Starbucks Coffee",
+              "category": "Dining",
+              "type": "debit"
+            },
+            {
+              "id": "tx_03",
+              "account_id": "acc_chk_01",
+              "date": "2026-10-20",
+              "amount": 1850.0,
+              "merchant": "Acme Corp Payroll",
+              "category": "Salary / Income",
+              "type": "credit"
+            },
+            {
+              "id": "tx_08",
+              "account_id": "acc_chk_01",
+              "date": "2026-10-15",
+              "amount": 45.0,
+              "merchant": "Planet Fitness",
+              "category": "Health & Fitness",
+              "type": "debit"
+            }
+          ],
+          "status": "active"
+        }
+      },
+      "mcp_tools_invoked": [
+        "plaid_db_lookup"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_15304fae",
+      "name": "query_credit_card",
+      "agent_name": "Credit Card Watcher",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:51:55.628018",
+      "end_time": "2026-11-20T17:51:55.630063",
+      "duration_ms": 2.045154571533203,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "credit_card": {
+          "account_id": "acc_cc_02",
+          "name": "Cash Rewards Platinum Card",
+          "current_balance": 1850.0,
+          "credit_limit": 3000.0,
+          "available_credit": 1150.0,
+          "apr_percentage": 24.99,
+          "minimum_payment": 65.0,
+          "next_payment_due_date": "2026-11-05",
+          "utilization_rate_pct": 61.67
+        }
+      },
+      "mcp_tools_invoked": [
+        "plaid_db_lookup"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_a146eab6",
+      "name": "query_savings_balance",
+      "agent_name": "Savings Account Watcher",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:51:55.630063",
+      "end_time": "2026-11-20T17:51:55.632064",
+      "duration_ms": 2.001047134399414,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "savings": {
+          "account_id": "acc_sav_03",
+          "name": "High Yield Emergency Savings",
+          "current_balance": 2450.0,
+          "available_balance": 2450.0,
+          "interest_rate_apy": 4.25,
+          "target_emergency_reserve": 5000.0,
+          "safe_buffer_available": 450.0
+        }
+      },
+      "mcp_tools_invoked": [
+        "plaid_db_lookup",
+        "financial_calculator"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_40bb4a39",
+      "name": "query_investment_portfolio",
+      "agent_name": "Investment Account Watcher",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:51:55.632064",
+      "end_time": "2026-11-20T17:51:55.651497",
+      "duration_ms": 19.432544708251953,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "investment": {
+          "account_id": "acc_inv_04",
+          "name": "Growth & Index Brokerage",
+          "total_portfolio_value": 12850.0,
+          "cash_reserve": 350.0,
+          "holdings": [
+            {
+              "symbol": "VOO",
+              "name": "Vanguard S&P 500 ETF",
+              "shares": 15.0,
+              "current_price": 520.4,
+              "market_value": 7806.0,
+              "unrealized_gain_pct": 14.2
+            },
+            {
+              "symbol": "AAPL",
+              "name": "Apple Inc.",
+              "shares": 14.0,
+              "current_price": 235.1,
+              "market_value": 3291.4,
+              "unrealized_gain_pct": 8.7
+            },
+            {
+              "symbol": "NVDA",
+              "name": "NVIDIA Corporation",
+              "shares": 10.0,
+              "current_price": 140.26,
+              "market_value": 1402.6,
+              "unrealized_gain_pct": 28.5
+            },
+            {
+              "symbol": "TSLA",
+              "name": "Tesla Inc.",
+              "shares": 1.5,
+              "current_price": 233.33,
+              "market_value": 350.0,
+              "unrealized_gain_pct": -6.4
+            }
+          ],
+          "daily_unrealized_change_pct": 0.45,
+          "volatility_alert": "Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)"
+        }
+      },
+      "mcp_tools_invoked": [
+        "plaid_db_lookup",
+        "market_data_parser"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_978d1e49",
+      "name": "analyze_bills",
+      "agent_name": "Bill Analysis Agent",
+      "framework": "CrewAI",
+      "start_time": "2026-11-20T17:51:58.368538",
+      "end_time": "2026-11-20T17:51:58.368538",
+      "duration_ms": 0.0,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "bill_analysis": {
+          "total_upcoming_bills_7d": 1345.0,
+          "total_upcoming_bills_30d": 1529.98,
+          "days_to_next_major_bill": 3,
+          "next_major_bill_name": "Apartment Rent",
+          "next_major_bill_amount": 1200.0,
+          "immediate_shortfall_risk": false,
+          "bills_detail": [
+            {
+              "bill_id": "bill_01",
+              "name": "Apartment Rent",
+              "amount": 1200.0,
+              "due_date": "2026-10-30",
+              "days_until_due": 3,
+              "category": "Housing",
+              "status": "pending",
+              "mandatory": true,
+              "recipient": "Oakwood Property Mgmt",
+              "consequence_of_miss": "Late fee of $75.00 and notice to vacate warning."
+            },
+            {
+              "bill_id": "bill_02",
+              "name": "Electric & Internet Utility",
+              "amount": 145.0,
+              "due_date": "2026-11-02",
+              "days_until_due": 6,
+              "category": "Utilities",
+              "status": "pending",
+              "mandatory": true,
+              "recipient": "City Power & Metro Fiber",
+              "consequence_of_miss": "Service disconnection after grace period."
+            },
+            {
+              "bill_id": "bill_03",
+              "name": "Auto Insurance Premium",
+              "amount": 110.0,
+              "due_date": "2026-11-10",
+              "days_until_due": 14,
+              "category": "Insurance",
+              "status": "scheduled",
+              "mandatory": true,
+              "recipient": "State Farm Insurance",
+              "consequence_of_miss": "Coverage lapse."
+            },
+            {
+              "bill_id": "bill_04",
+              "name": "Streaming & Gym Subscriptions",
+              "amount": 74.98,
+              "due_date": "2026-11-12",
+              "days_until_due": 16,
+              "category": "Subscriptions",
+              "status": "scheduled",
+              "mandatory": false,
+              "recipient": "Spotify / Netflix / Gym",
+              "consequence_of_miss": "Account paused."
+            }
+          ]
+        }
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_9eb30304",
+      "name": "analyze_budget",
+      "agent_name": "Budget Analysis Agent",
+      "framework": "CrewAI",
+      "start_time": "2026-11-20T17:51:58.368538",
+      "end_time": "2026-11-20T17:51:58.372442",
+      "duration_ms": 3.9043426513671875,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "budget_analysis": {
+          "category": "Shopping & Discretionary",
+          "monthly_limit": 300.0,
+          "spent_to_date": 282.0,
+          "remaining_budget": 18.0,
+          "exceeds_budget_if_purchased": true,
+          "projected_overage_amount": 22.0,
+          "category_status": "OVER_BUDGET"
+        }
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_30577949",
+      "name": "forecast_cash_flow",
+      "agent_name": "Cash-Flow Forecast Agent",
+      "framework": "CrewAI",
+      "start_time": "2026-11-20T17:51:58.372442",
+      "end_time": "2026-11-20T17:51:58.372442",
+      "duration_ms": 0.0,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "cash_flow": {
+          "current_liquid_checking": 1350.0,
+          "projected_balance_after_purchase": 1310.0,
+          "projected_balance_after_bills_and_purchase": -35.0,
+          "projected_cash_runway_days": 16,
+          "will_trigger_overdraft": true,
+          "net_7d_cash_flow": -1385.0,
+          "cash_flow_trajectory": "NEGATIVE"
+        }
+      },
+      "mcp_tools_invoked": [
+        "financial_calculator"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_b177fee5",
+      "name": "evaluate_goal_impact",
+      "agent_name": "Goal Progress Agent",
+      "framework": "CrewAI",
+      "start_time": "2026-11-20T17:51:58.372442",
+      "end_time": "2026-11-20T17:51:58.372442",
+      "duration_ms": 0.0,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "goal_progress": {
+          "active_goals": [
+            {
+              "goal_id": "goal_01",
+              "name": "3-Month Emergency Fund",
+              "target_amount": 5000.0,
+              "current_amount": 2450.0,
+              "monthly_contribution_target": 250.0,
+              "priority": "HIGH",
+              "deadline": "2027-04-30",
+              "minimum_lock_reserve": 2000.0,
+              "notes": "Essential liquidity safety net. Any purchase dipping into this threshold is dangerous."
+            },
+            {
+              "goal_id": "goal_02",
+              "name": "Summer Vacation Trip",
+              "target_amount": 1500.0,
+              "current_amount": 600.0,
+              "monthly_contribution_target": 150.0,
+              "priority": "MEDIUM",
+              "deadline": "2027-06-15",
+              "minimum_lock_reserve": 0.0,
+              "notes": "Discretionary savings bucket."
+            }
+          ],
+          "emergency_fund_target": 5000.0,
+          "emergency_fund_current": 2450.0,
+          "emergency_fund_coverage_pct": 49.0,
+          "violates_emergency_reserve_floor": false,
+          "estimated_goal_delay_days": 4
+        }
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_4c826d58",
+      "name": "assess_financial_risk",
+      "agent_name": "Risk / Anomaly Agent",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:52:13.452789",
+      "end_time": "2026-11-20T17:52:13.452789",
+      "duration_ms": 0.9953975677490234,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "risk": {
+          "risk_score": 70,
+          "risk_level": "CRITICAL",
+          "anomaly_flags": [
+            "HIGH CREDIT UTILIZATION: Platinum card is at 61.7% capacity (Target: <30%). Adding more balance harms credit score.",
+            "BILL COLLISION HAZARD: Apartment Rent ($1,200.00) is due in 3 days, exceeding remaining liquid checking ($1,310.00)!",
+            "MARKET VOLATILITY: Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)"
+          ],
+          "credit_utilization_danger": true,
+          "liquidity_crisis_danger": true,
+          "market_drawdown_exposure": true,
+          "risk_summary": "Risk Level: CRITICAL (Score: 70/100). Key factors: HIGH CREDIT UTILIZATION: Platinum card is at 61.7% capacity (Target: <30%). Adding more balance harms credit score.; BILL COLLISION HAZARD: Apartment Rent ($1,200.00) is due in 3 days, exceeding remaining liquid checking ($1,310.00)!; MARKET VOLATILITY: Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)"
+        }
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_b5e82a24",
+      "name": "evaluate_affordability",
+      "agent_name": "Affordability Evaluator Agent",
+      "framework": "CrewAI",
+      "start_time": "2026-11-20T17:52:22.042542",
+      "end_time": "2026-11-20T17:52:22.042542",
+      "duration_ms": 0.9920597076416016,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "affordability": {
+          "verdict": "CONDITIONAL_AFFORD",
+          "confidence_score": 0.88,
+          "primary_reason": "Purchase is feasible with available funds, but exceeds category budget by $22.00 or compresses cash runway to 16 days.",
+          "affordability_ratio": 0.9704,
+          "stress_test_passed": true
+        }
+      },
+      "mcp_tools_invoked": [
+        "financial_calculator"
+      ],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "span_id": "span_66a24edc",
+      "name": "synthesize_final_verdict",
+      "agent_name": "Coordinator Agent",
+      "framework": "ADK",
+      "start_time": "2026-11-20T17:52:37.305130",
+      "end_time": "2026-11-20T17:52:37.306095",
+      "duration_ms": 0.0,
+      "status": "SUCCESS",
+      "input_data": {},
+      "output_data": {
+        "final_verdict": {
+          "item_name": "KEYBOARD",
+          "amount": 40.0,
+          "category": "Shopping & Discretionary",
+          "verdict": "CONDITIONAL_AFFORD",
+          "verdict_badge_color": "#fd7e14",
+          "confidence_score": 0.88,
+          "headline": "Proceed with caution: You can technically afford the KEYBOARD, but it strains your safety margin.",
+          "executive_summary": "While you have funds available, this purchase consumes 22.00 over your target discretionary budget and reduces your liquid cash runway to 16 days.",
+          "metrics_table": [
+            {
+              "metric": "Checking Account Available",
+              "current_value": "$1,350.00",
+              "post_purchase_value": "$1,310.00",
+              "status": "HEALTHY",
+              "impact": "-$40.00"
+            },
+            {
+              "metric": "Upcoming Mandatory Bills (7 Days)",
+              "current_value": "$1,345.00",
+              "post_purchase_value": "$1,345.00",
+              "status": "UNPAID",
+              "impact": "Due in 3d"
+            },
+            {
+              "metric": "Category Budget Remaining",
+              "current_value": "$18.00",
+              "post_purchase_value": "$-22.00",
+              "status": "DEFICIT",
+              "impact": "Limit: $300.00"
+            },
+            {
+              "metric": "Credit Card Utilization",
+              "current_value": "61.7%",
+              "post_purchase_value": "61.7% (Untouched)",
+              "status": "HIGH",
+              "impact": "APR: 24.99%"
+            },
+            {
+              "metric": "Emergency Reserve Protection",
+              "current_value": "$2,450.00",
+              "post_purchase_value": "$2,450.00 (Locked)",
+              "status": "SAFEGUARDED",
+              "impact": "Target: $5,000.00"
+            },
+            {
+              "metric": "Total Investment Valuation",
+              "current_value": "$12,850.00",
+              "post_purchase_value": "$12,850.00 (Illiquid)",
+              "status": "VOLATILE",
+              "impact": "Long-term growth"
+            }
+          ],
+          "cash_flow_timeline": [
+            {
+              "date": "Today",
+              "event": "Proposed Purchase: KEYBOARD",
+              "cash_in_out": -40.0,
+              "projected_balance": 1310.0,
+              "status": "EXECUTED"
+            },
+            {
+              "date": "In 3 Days (2026-10-30)",
+              "event": "Apartment Rent Payment",
+              "cash_in_out": -1200.0,
+              "projected_balance": 110.0,
+              "status": "SETTLED"
+            },
+            {
+              "date": "In 6 Days (2026-11-02)",
+              "event": "Electric & Internet Utility",
+              "cash_in_out": -145.0,
+              "projected_balance": -35.0,
+              "status": "PENDING"
+            },
+            {
+              "date": "In 10 Days (2026-11-05)",
+              "event": "Credit Card Minimum Payment Due",
+              "cash_in_out": -65.0,
+              "projected_balance": -100.0,
+              "status": "PENDING"
+            }
+          ],
+          "critical_warnings": [
+            "HIGH CREDIT UTILIZATION: Platinum card is at 61.7% capacity (Target: <30%). Adding more balance harms credit score.",
+            "BILL COLLISION HAZARD: Apartment Rent ($1,200.00) is due in 3 days, exceeding remaining liquid checking ($1,310.00)!",
+            "MARKET VOLATILITY: Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)",
+            "Budget Overage: 'Shopping & Discretionary' budget is exceeded by $22.00."
+          ],
+          "actionable_alternatives": [
+            "If you buy this item, reduce your dining or entertainment budget by $40.00 for the remaining 5 days of the month.",
+            "Set a calendar alert for the next rent and utility due dates."
+          ],
+          "risk_breakdown": {
+            "risk_score": 70,
+            "risk_level": "CRITICAL",
+            "anomaly_flags": [
+              "HIGH CREDIT UTILIZATION: Platinum card is at 61.7% capacity (Target: <30%). Adding more balance harms credit score.",
+              "BILL COLLISION HAZARD: Apartment Rent ($1,200.00) is due in 3 days, exceeding remaining liquid checking ($1,310.00)!",
+              "MARKET VOLATILITY: Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)"
+            ],
+            "credit_utilization_danger": true,
+            "liquidity_crisis_danger": true,
+            "market_drawdown_exposure": true,
+            "risk_summary": "Risk Level: CRITICAL (Score: 70/100). Key factors: HIGH CREDIT UTILIZATION: Platinum card is at 61.7% capacity (Target: <30%). Adding more balance harms credit score.; BILL COLLISION HAZARD: Apartment Rent ($1,200.00) is due in 3 days, exceeding remaining liquid checking ($1,310.00)!; MARKET VOLATILITY: Elevated volatility on TSLA (-3.2% change, flag: ELEVATED_VOLATILITY)"
+          },
+          "provenance_trace_id": "fg_trace_20261120175153",
+          "generated_at": "2026-11-20T17:52:37.305130"
+        }
+      },
+      "mcp_tools_invoked": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "error": null
+    }
+  ],
+  "guardrails_passed": true,
+  "frameworks_used": [
+    "ADK",
+    "CrewAI",
+    "MCP"
+  ]
+}

@@ -1,0 +1,55 @@
+
+[
+  {
+    "bill_id": "bill_01",
+    "name": "Apartment Rent",
+    "amount": 1200.00,
+    "due_date": "2026-10-30",
+    "category": "Housing",
+    "status": "pending",
+    "mandatory": true,
+    "recipient": "Oakwood Property Mgmt",
+    "consequence_of_miss": "Late fee of $75.00 and notice to vacate warning.",
+    "recurrence": "monthly",
+    "last_payment_date": null
+  },
+  {
+    "bill_id": "bill_02",
+    "name": "Electric & Internet Utility",
+    "amount": 145.00,
+    "due_date": "2026-11-02",
+    "category": "Utilities",
+    "status": "pending",
+    "mandatory": true,
+    "recipient": "City Power & Metro Fiber",
+    "consequence_of_miss": "Service disconnection after grace period.",
+    "recurrence": "monthly",
+    "last_payment_date": null
+  },
+  {
+    "bill_id": "bill_03",
+    "name": "Auto Insurance Premium",
+    "amount": 110.00,
+    "due_date": "2026-11-10",
+    "category": "Insurance",
+    "status": "scheduled",
+    "mandatory": true,
+    "recipient": "State Farm Insurance",
+    "consequence_of_miss": "Coverage lapse.",
+    "recurrence": "monthly",
+    "last_payment_date": null
+  },
+  {
+    "bill_id": "bill_04",
+    "name": "Streaming & Gym Subscriptions",
+    "amount": 74.98,
+    "due_date": "2026-11-12",
+    "category": "Subscriptions",
+    "status": "scheduled",
+    "mandatory": false,
+    "recipient": "Spotify / Netflix / Gym",
+    "consequence_of_miss": "Account paused.",
+    "recurrence": "monthly",
+    "last_payment_date": null
+  }
+]

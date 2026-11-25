@@ -1,0 +1,69 @@
+{
+  "accounts": {
+    "checking": {
+      "account_id": "acc_chk_01",
+      "name": "Everyday Checking Account",
+      "type": "depository",
+      "subtype": "checking",
+      "mask": "4921",
+      "current_balance": 1375.00,
+      "available_balance": 1350.00,
+      "currency": "USD",
+      "status": "active",
+      "overdraft_protection": false
+    },
+    "credit_card": {
+      "account_id": "acc_cc_02",
+      "name": "Cash Rewards Platinum Card",
+      "type": "credit",
+      "subtype": "credit card",
+      "mask": "8304",
+      "current_balance": 1850.00,
+      "credit_limit": 3000.00,
+      "available_credit": 1150.00,
+      "apr_percentage": 24.99,
+      "minimum_payment": 65.00,
+      "next_payment_due_date": "2026-11-05",
+      "utilization_rate_pct": 61.67,
+      "currency": "USD"
+    },
+    "savings": {
+      "account_id": "acc_sav_03",
+      "name": "High Yield Emergency Savings",
+      "type": "depository",
+      "subtype": "savings",
+      "mask": "1942",
+      "current_balance": 2450.00,
+      "available_balance": 2450.00,
+      "interest_rate_apy": 4.25,
+      "target_emergency_reserve": 5000.00,
+      "currency": "USD"
+    },
+    "investment": {
+      "account_id": "acc_inv_04",
+      "name": "Growth & Index Brokerage",
+      "type": "investment",
+      "subtype": "brokerage",
+      "mask": "7719",
+      "total_portfolio_value": 12850.00,
+      "cash_reserve": 350.00,
+      "currency": "USD",
+      "holdings": [
+        {"symbol": "VOO", "name": "Vanguard S&P 500 ETF", "shares": 15.0, "current_price": 520.40, "market_value": 7806.00, "unrealized_gain_pct": 14.2},
+        {"symbol": "AAPL", "name": "Apple Inc.", "shares": 14.0, "current_price": 235.10, "market_value": 3291.40, "unrealized_gain_pct": 8.7},
+        {"symbol": "NVDA", "name": "NVIDIA Corporation", "shares": 10.0, "current_price": 140.26, "market_value": 1402.60, "unrealized_gain_pct": 28.5},
+        {"symbol": "TSLA", "name": "Tesla Inc.", "shares": 1.5, "current_price": 233.33, "market_value": 350.00, "unrealized_gain_pct": -6.4}
+      ]
+    }
+  },
+  "recent_transactions": [
+    {"id": "tx_01", "account_id": "acc_chk_01", "date": "2026-10-25", "amount": 84.50, "merchant": "Whole Foods Market", "category": "Groceries", "type": "debit"},
+    {"id": "tx_02", "account_id": "acc_chk_01", "date": "2026-10-23", "amount": 15.75, "merchant": "Starbucks Coffee", "category": "Dining", "type": "debit"},
+    {"id": "tx_03", "account_id": "acc_chk_01", "date": "2026-10-20", "amount": 1850.00, "merchant": "Acme Corp Payroll", "category": "Salary / Income", "type": "credit"},
+    {"id": "tx_04", "account_id": "acc_cc_02", "date": "2026-10-24", "amount": 142.00, "merchant": "Amazon.com", "category": "Shopping", "type": "debit"},
+    {"id": "tx_05", "account_id": "acc_cc_02", "date": "2026-10-22", "amount": 68.40, "merchant": "Shell Gas Station", "category": "Transportation", "type": "debit"},
+    {"id": "tx_06", "account_id": "acc_cc_02", "date": "2026-10-18", "amount": 125.00, "merchant": "Best Buy Electronics", "category": "Electronics", "type": "debit"},
+    {"id": "tx_07", "account_id": "acc_sav_03", "date": "2026-10-01", "amount": 8.52, "merchant": "Interest Paid", "category": "Interest", "type": "credit"},
+    {"id": "tx_08", "account_id": "acc_chk_01", "date": "2026-10-15", "amount": 45.00, "merchant": "Planet Fitness", "category": "Health & Fitness", "type": "debit"}
+  ]
+}

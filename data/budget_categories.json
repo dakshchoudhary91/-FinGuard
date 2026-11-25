@@ -1,0 +1,48 @@
+{
+  "month": "2026-10",
+  "total_monthly_income": 3700.00,
+  "categories": {
+    "Housing": {
+      "monthly_limit": 1200.00,
+      "spent_to_date": 0.00,
+      "remaining": 1200.00,
+      "status": "DUE_SOON"
+    },
+    "Groceries": {
+      "monthly_limit": 450.00,
+      "spent_to_date": 384.50,
+      "remaining": 65.50,
+      "status": "WARNING"
+    },
+    "Dining & Takeout": {
+      "monthly_limit": 250.00,
+      "spent_to_date": 160.00,
+      "remaining": 90.00,
+      "status": "ON_TRACK"
+    },
+    "Shopping & Discretionary": {
+      "monthly_limit": 300.00,
+      "spent_to_date": 282.00,
+      "remaining": 18.00,
+      "status": "CRITICAL"
+    },
+    "Transportation & Gas": {
+      "monthly_limit": 200.00,
+      "spent_to_date": 148.40,
+      "remaining": 51.60,
+      "status": "ON_TRACK"
+    },
+    "Utilities & Subscriptions": {
+      "monthly_limit": 250.00,
+      "spent_to_date": 74.98,
+      "remaining": 175.02,
+      "status": "ON_TRACK"
+    },
+    "Health & Fitness": {
+      "monthly_limit": 80.00,
+      "spent_to_date": 45.00,
+      "remaining": 35.00,
+      "status": "ON_TRACK"
+    }
+  }
+}
